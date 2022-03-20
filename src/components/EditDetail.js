@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { EditPage } from "./EditPage";
+import { URL } from "../Constant";
 
 export function EditDetail({match}){
    const id=match.params.id;
@@ -10,14 +11,15 @@ export function EditDetail({match}){
     
     const editDetail=async ()=>{
         try{
-        const {data}=await axios.get(`http://localhost:5000/api/job/${id}`)
+        const {data}=await axios.get(`${URL}/api/job/${id}`)
         setDetail(data)
         }catch(err){
             window.alert(err)
         }
     }
     useEffect(()=>{
-        editDetail()   
+        editDetail() 
+        // eslint-disable-next-line 
     },[])
     
 

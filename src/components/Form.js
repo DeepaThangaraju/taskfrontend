@@ -2,6 +2,7 @@ import { Form, Col, Row,Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios" 
 import {Display} from "./Display"
+import { URL } from "../Constant";
 
 
 export function Forms() {
@@ -23,7 +24,7 @@ export function Forms() {
       mobile,jobType,location,email,profilePic,dob
     }
     
-    axios.post("http://localhost:5000/api/job",detail)
+    axios.post(`${URL}/api/job`,detail)
     .then(()=>window.location.reload())
     .catch((err)=>
       window.alert("not Added")

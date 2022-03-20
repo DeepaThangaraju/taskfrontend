@@ -1,6 +1,7 @@
 import axios from "axios"
 import { Table,Button } from "react-bootstrap"
 import { useHistory } from "react-router-dom"
+import { URL } from "../Constant";
 
 
 
@@ -11,10 +12,10 @@ const history=useHistory()
 
     const deleteDetail=async (id)=>{
         try{
-        const det=axios.get(`http://localhost:5000/api/job/${id}`)
+        const det=axios.get(`${URL}/api/job/${id}`)
         if(det){
             if(window.confirm("Are you sure")){
-                await axios.delete(`http://localhost:5000/api/job/${id}`)
+                await axios.delete(`${URL}/api/job/${id}`)
                 window.location.reload(false);
             }
         }

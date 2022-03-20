@@ -2,6 +2,7 @@ import { Form, Col, Row,Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios" 
 import { useHistory } from "react-router-dom";
+import { URL } from "../Constant";
 
 
 export function EditPage({updateDetail}){
@@ -34,7 +35,7 @@ export function EditPage({updateDetail}){
     }
     try{
     axios
-    .put(`http://localhost:5000/api/job/${updateDetail._id}`,detail)
+    .put(`${URL}/api/job/${updateDetail._id}`,detail)
     .then((res)=>console.log(res))
     .catch(err=>console.log(err))
     history.push("/")
