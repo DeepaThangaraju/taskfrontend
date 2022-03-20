@@ -44,6 +44,7 @@ export function Forms() {
             placeholder="Enter name" 
             value={fullName}
             onChange={(e)=>setFullName(e.target.value)}
+            required
             />
           </Form.Group>
 
@@ -54,6 +55,7 @@ export function Forms() {
             placeholder="Enter the Url" 
             value={profilePic}
             onChange={(e)=>setProfilePic(e.target.value)}
+            
             />
           </Form.Group>
         </Row>
@@ -65,6 +67,7 @@ export function Forms() {
             placeholder="Enter mobile number" 
             value={mobile}
             onChange={(e)=>setMobile(e.target.value)}
+            required
             />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridEmail">
@@ -74,6 +77,7 @@ export function Forms() {
             placeholder="Enter email" 
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
+            required
             />
           </Form.Group>
         </Row>
