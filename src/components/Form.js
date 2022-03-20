@@ -33,6 +33,7 @@ export function Forms() {
 }
 
   return (
+    <div>
     <div className="container form-container">
        <h3 className="regis">REGISTRATION</h3>
        
@@ -116,6 +117,7 @@ export function Forms() {
         </Form.Group>
         </Row>
       </Form>
+      </div>
       <Display/>
     </div>
   );
